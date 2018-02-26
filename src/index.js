@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import App from './App';
+import articlesReducer from 'articles/articles.reducer';
 import registerServiceWorker from 'registerServiceWorker';
 
 // 1. Setup store to use middleware (thunk) to create API calls.
@@ -22,11 +23,12 @@ if (process.env.NODE_ENV === 'development') {
   const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
   store = createStore(
+    articlesReducer,
     composeEnhancers(applyMiddleware(...middleware))
   );
 } else {
   // 1. Create store composed of reducers and middleware.
-  store = createStore(applyMiddleware(...middleware));
+  store = createStore(articlesReducer, applyMiddleware(...middleware));
 }
 
 ReactDOM.render(

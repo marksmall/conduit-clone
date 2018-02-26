@@ -6,6 +6,7 @@ import Banner from 'layout/banner.component';
 import Footer from 'layout/footer.component';
 
 import './App.css';
+import ArticlesListContainer from 'articles/articles.container';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <div className="App">
         <Header appName={this.props.appName} />
         <Banner appName={this.props.appName} />
+        <ArticlesListContainer />
         <Footer appName={this.props.appName} />
       </div>
     );
