@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './articles-list.component.css';
+import styles from './articles-list.module.css';
 
 class ArticlesList extends Component {
   componentWillMount() {
