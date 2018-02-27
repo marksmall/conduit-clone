@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
+
+import 'semantic-ui-css/semantic.min.css';
 
 import './index.css';
 import App from './App';
@@ -32,9 +35,11 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();
