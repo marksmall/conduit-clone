@@ -11,8 +11,8 @@ import 'semantic-ui-css/semantic.min.css';
 
 import './index.css';
 import App from './App';
-import articlesReducer from 'articles/articles.reducer';
-import registerServiceWorker from 'registerServiceWorker';
+import articlesReducer from './articles/articles.reducer';
+import registerServiceWorker from './registerServiceWorker';
 
 // 1. Setup store to use middleware (thunk) to create API calls.
 // 2. Add redux-logger to middleware.

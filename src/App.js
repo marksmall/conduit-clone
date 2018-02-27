@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import Redirect from 'react-router-dom/Redirect';
 
-import Header from 'layout/header.component';
-import Banner from 'layout/banner.component';
-import Footer from 'layout/footer.component';
+import Header from './layout/header.component';
+import Banner from './layout/banner.component';
+import Footer from './layout/footer.component';
+import PageNotFound from './layout/page-not-found.component';
 
-import ArticlesListContainer from 'articles/articles.container';
+import ArticlesListContainer from './articles/articles.container';
 
 import styles from './App.module.css';
 
@@ -20,7 +21,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/articles" component={ArticlesListContainer} />
-            <Redirect from="/" to="/articles" />
+            <Redirect exact from="/" to="/articles" />
+            <Route component={PageNotFound} />
           </Switch>
         </div>
         <Footer appName={this.props.appName} />
