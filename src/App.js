@@ -75,9 +75,10 @@ class App extends Component {
           </ul>
 
           <hr />
-
-          <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} />
+          <Switch>
+            <Route exact path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
+          </Switch>
         </div>
 
         <div>
