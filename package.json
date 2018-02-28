@@ -27,10 +27,8 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts-cssmodules": "^1.0.171",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-mock-store": "^1.5.1",
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.3"
@@ -69,7 +67,9 @@
     "prettier": "^1.10.2",
     "react-addons-test-utils": "^15.6.2",
     "react-scripts": "^1.1.1",
+    "react-scripts-cssmodules": "^1.0.171",
     "react-test-renderer": "^16.2.0",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.5.1"
   }
 }
