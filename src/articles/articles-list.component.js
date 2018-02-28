@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './articles-list.module.css';
+import ArticlePreview from './article-preview.component';
 
 class ArticlesList extends Component {
   componentWillMount() {
@@ -11,19 +12,22 @@ class ArticlesList extends Component {
     const { articles } = this.props;
 
     if (!articles) {
-      return <div className="article-preview">Loading...</div>;
+      return <div className="article-loading">Loading...</div>;
     }
 
     if (articles.length === 0) {
-      return (
-        <div className="article-preview">No articles are here... yet.</div>
-      );
+      return <div className="no-articles">No articles are here... yet.</div>;
     }
 
     return (
       <div>
-        {articles.map(({ title }, index) => {
-          return <h2 key={index}>{title}</h2>;
+        {articles.map(article => {
+          return (
+            <div key={article.slug} className="articles">
+              <h2>{article.title}</h2>
+              <ArticlePreview article={article} />
+            </div>
+          );
         })}
       </div>
     );
