@@ -2,6 +2,24 @@
   "name": "conduit-clone",
   "version": "0.1.0",
   "private": true,
+  "configurations": [
+    {
+      "name": "Debug CRA Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+      "args": [
+        "test",
+        "--runInBand",
+        "--no-cache",
+        "--env=jsdom"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ],
   "dependencies": {
     "cross-fetch": "^1.1.1",
     "prop-types": "^15.6.0",
@@ -12,6 +30,7 @@
     "react-scripts-cssmodules": "^1.0.171",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.1",
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.3"
@@ -32,6 +51,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -42,9 +63,13 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "jest-enzyme": "^4.2.0",
+    "jest-fetch-mock": "^1.4.2",
     "lint-staged": "^7.0.0",
     "prettier": "^1.10.2",
+    "react-addons-test-utils": "^15.6.2",
     "react-scripts": "^1.1.1",
+    "react-test-renderer": "^16.2.0",
     "redux-devtools-extension": "^2.13.2"
   }
 }
