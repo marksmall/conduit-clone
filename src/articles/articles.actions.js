@@ -1,4 +1,4 @@
-import fetch from 'cross-fetch';
+import 'cross-fetch';
 
 export const GET_ARTICLES = 'GET_ARTICLES';
 export const GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS';

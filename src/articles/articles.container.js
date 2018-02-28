@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 
 import ArticlesList from './articles-list.component';
 import { fetchArticles } from './articles.actions';
+import { getArticles } from './articles.reducer';
 
 const mapStateToProps = state => {
   return {
-    articles: state.articles
+    articles: getArticles(state)
   };
 };
 

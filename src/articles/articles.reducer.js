@@ -24,12 +24,11 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         isFetching: false,
-        articles: action.articles.articles,
-        error: null
+        articles: action.articles.articles
       };
     case GET_ARTICLES_FAILURE:
       const error = action.payload || { message: action.payload.message };
-      console.log('Error created: ', error);
+      // console.log('Error created: ', error);
       return {
         ...state,
         isFetching: false,
@@ -40,3 +39,5 @@ export default (state = defaultState, action) => {
       return state;
   }
 };
+
+export const getArticles = state => state.articles;
