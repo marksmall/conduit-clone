@@ -7,16 +7,20 @@ import styles from './header.module.css';
 
 const Header = ({ appName }) => {
   return (
-    <header className={styles.header}>
+    <header>
       <nav className="navbar navbar-light">
-        <h4>{appName.toLowerCase()}</h4>
-
+        <a className="navbar-brand" href="#">
+          <h4 className={styles.brand}>{appName.toLowerCase()}</h4>
+        </a>
         <div>
           <NavLink to="/articles" activeClassName="active">
             <Button content="Articles" />
           </NavLink>
           <NavLink to="/login" activeClassName="active">
             <Button content="Login" />
+          </NavLink>
+          <NavLink to="/signup" activeClassName="active">
+            <Button content="Sign up" />
           </NavLink>
         </div>
       </nav>
