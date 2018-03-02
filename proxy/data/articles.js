@@ -324,7 +324,8 @@ const ARTICLES = {
       author: {
         username: 'kak',
         bio: null,
-        image: 'aa',
+        image:
+          'https://vignette.wikia.nocookie.net/tick/images/f/f4/Overkill-Promo-HS.jpg/revision/latest?cb=20170724145455',
         following: false
       },
       favorited: false,
@@ -341,7 +342,8 @@ const ARTICLES = {
       author: {
         username: 'kak',
         bio: null,
-        image: 'aa',
+        image:
+          'https://vignette.wikia.nocookie.net/tick/images/f/f4/Overkill-Promo-HS.jpg/revision/latest?cb=20170724145455',
         following: false
       },
       favorited: false,

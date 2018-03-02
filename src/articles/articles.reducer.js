@@ -4,14 +4,13 @@ import {
   GET_ARTICLES_FAILURE
 } from './articles.actions';
 
-const defaultState = {
-  appName: 'Conduit',
+const DEFAULT_STATE = {
   isFetching: false,
   articles: null,
   error: null
 };
 
-export default (state = defaultState, action) => {
+export default (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case GET_ARTICLES:
       return {
@@ -24,7 +23,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         isFetching: false,
-        articles: action.articles.articles
+        articles: action.articles
       };
     case GET_ARTICLES_FAILURE:
       const error = action.payload || { message: action.payload.message };
@@ -40,4 +39,5 @@ export default (state = defaultState, action) => {
   }
 };
 
-export const getArticles = state => state.articles;
+// Articles selector, used in container
+export const getArticles = state => state.articles.articles;

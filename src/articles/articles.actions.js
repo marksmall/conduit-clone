@@ -4,7 +4,7 @@ export const GET_ARTICLES = 'GET_ARTICLES';
 export const GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS';
 export const GET_ARTICLES_FAILURE = 'GET_ARTICLES_FAILURE';
 
-const API_ROOT = 'https://conduit.productionready.io/api';
+const API_ROOT = '/api';
 
 // Synchronous action creators.
 export const getArticles = () => {
@@ -13,7 +13,7 @@ export const getArticles = () => {
   };
 };
 
-export const getArticlesSuccess = articles => {
+export const getArticlesSuccess = ({ articles }) => {
   return {
     type: GET_ARTICLES_SUCCESS,
     articles

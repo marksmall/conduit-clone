@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import styles from './articles-list.module.css';
 import ArticlePreview from './article-preview.component';
 
 class ArticlesList extends Component {
