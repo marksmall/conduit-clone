@@ -20,6 +20,7 @@
       "internalConsoleOptions": "neverOpen"
     }
   ],
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "cross-fetch": "^1.1.1",
     "prop-types": "^15.6.0",
@@ -34,12 +35,13 @@
     "semantic-ui-react": "^0.78.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently 'yarn run proxy' 'react-scripts start'",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "format": "prettier --single-quote --write src /**/ * .js"
+    "format": "prettier --single-quote --write src /**/ * .js",
+    "proxy": "nodemon -w proxy ./proxy/proxy.js"
   },
   "lint-staged": {
     "*.js": [
@@ -49,6 +51,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.1",
@@ -60,10 +64,14 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "express": "^4.16.2",
     "husky": "^0.14.3",
     "jest-enzyme": "^4.2.0",
     "jest-fetch-mock": "^1.4.2",
     "lint-staged": "^7.0.0",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.1",
     "prettier": "^1.10.2",
     "react-addons-test-utils": "^15.6.2",
     "react-scripts": "^1.1.1",
