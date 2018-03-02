@@ -24,7 +24,6 @@ class ArticlesList extends Component {
         {articles.map(article => {
           return (
             <div key={article.slug} className="articles">
-              <h2>{article.title}</h2>
               <ArticlePreview article={article} />
             </div>
           );

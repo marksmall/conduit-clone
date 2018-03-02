@@ -1,0 +1,61 @@
+.article-preview {
+  border-top: 1px solid #bbb;
+  padding: 1.5rem 0;
+  text-align: left;
+}
+
+.article-meta {
+  display: flex;
+  margin: 0 0 1rem 0;
+}
+
+.article-meta img {
+  height: 32px;
+  width: 32px;
+  border-radius: 30px;
+  margin-right: .5rem;
+}
+
+.author-details {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-preview .author {
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+.preview-link:hover {
+  text-decoration: none;
+}
+
+.article-preview .date {
+  color: #bbb;
+  font-size: .8rem;
+}
+
+.preview-link h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color:rgb(55, 58, 60);
+}
+
+.preview-link p {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.3rem;
+}
+
+.preview-link span {
+  font-weight: 300;
+  font-size: .8rem;
+  color: #bbb;
+  line-height: 1.3rem;
+}

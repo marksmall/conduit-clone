@@ -1,32 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import styles from './article-preview.module.css';
+import styles from './article-preview.module.css';
 
 const ArticlePreview = props => {
   const article = props.article;
 
   return (
-    <div className="article-preview">
-      <div className="article-meta">
+    <div className={styles['article-preview']}>
+      <div className={styles['article-meta']}>
         <a>
           <img src={article.author.image} alt="Author" />
         </a>
 
-        <div className="info">
-          <a className="author">{article.author.username}</a>
-          <span className="date">
-            {new Date(article.createdAt).toDateString()}
-          </span>
-        </div>
+        <div className={styles['author-details']}>
+          <div className={styles['info']}>
+            <a href="#" className={styles['author']}>
+              {article.author.username}
+            </a>
+            <span className={styles['date']}>
+              {new Date(article.createdAt).toDateString()}
+            </span>
+          </div>
 
-        <div className="pull-xs-right">
-          <button className="btn btn-sm btn-outline-primary">
-            <i className="ion-heart" /> {article.favoritesCount}
-          </button>
+          <div className="float-sm-right">
+            <button className="btn btn-sm btn-outline-success">
+              <i className="ion-heart" /> {article.favoritesCount}
+            </button>
+          </div>
         </div>
       </div>
 
-      <a to={`article/${article.slug}`} className="preview-link">
+      <Link to={`article/${article.slug}`} className={styles['preview-link']}>
         <h1>{article.title}</h1>
         <p>{article.description}</p>
         <span>Read more...</span>
@@ -39,7 +44,7 @@ const ArticlePreview = props => {
             );
           })}
         </ul>
-      </a>
+      </Link>
     </div>
   );
 };
