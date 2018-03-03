@@ -20,9 +20,10 @@ const isValid = request => {
 
 module.exports = (req, res) => {
   const request = req.body;
+  console.log('Login Data: ', request);
   // Validate request first.
   if (isValid(request)) {
-    console.log('Login Data: ', request);
+    console.log('Login Response: ', successResponse);
     res.json(successResponse);
   } else {
     // Invalid request, return Bad Request 400 Error.

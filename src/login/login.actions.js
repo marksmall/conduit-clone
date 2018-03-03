@@ -41,7 +41,6 @@ export const doLogin = form => dispatch => {
     },
     error => {
       dispatch(loginFailure(error));
-      // dispatch(alertActions.error(error));
     }
   );
 };

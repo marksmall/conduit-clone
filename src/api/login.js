@@ -8,10 +8,7 @@ const login = ({ username, password }) => {
   };
 
   return fetch(`${API_ROOT}/login`, options)
-    .then(response => {
-      console.log('Response: ', response);
-      handleResponse(response);
-    }) // Update the app state with the results of the API call.
+    .then(response => handleResponse(response)) // Update the app state with the results of the API call.
     .then(user => {
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
