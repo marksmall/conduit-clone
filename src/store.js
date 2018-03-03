@@ -4,6 +4,7 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 
 import articles from './articles/articles.reducer';
 import login from './login/login.reducer';
+import register from './register/register.reducer';
 
 // 1. Setup store to use middleware (thunk) to create API calls.
 // 2. Add redux-logger to middleware.
@@ -14,7 +15,8 @@ let store;
 const rootReducer = combineReducers({
   appName: (state = {}) => state,
   articles,
-  login
+  login,
+  register
 });
 const initialState = {
   appName: 'Conduit'

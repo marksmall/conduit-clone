@@ -12,6 +12,7 @@ var multer = require('multer');
 
 const articles = require('./api/articles.js');
 const login = require('./api/login.js');
+const register = require('./api/register.js');
 
 // configure app
 app.use(logger('dev')); // log requests to the console
@@ -48,7 +49,8 @@ router.get('/', function(req, res) {
 });
 
 router.get('/articles', articles.fetchArticles);
-router.route('/login').post(login);
+router.post('/login', login);
+router.post('/register', register);
 
 // Other example requests
 //
