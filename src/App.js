@@ -9,8 +9,8 @@ import Footer from './layout/footer.component';
 import PageNotFound from './layout/page-not-found.component';
 
 import ArticlesListContainer from './articles/articles.container';
-import LoginContainer from './session/login.container';
-import SignUpContainer from './session/sign-up.container';
+import LoginContainer from './login/login.container';
+import RegisterContainer from './register/register.container';
 
 import styles from './App.module.css';
 
@@ -34,7 +34,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/articles" component={ArticlesListContainer} />
               <Route exact path="/login" component={LoginContainer} />
-              <Route exact path="/signup" component={SignUpContainer} />
+              <Route exact path="/signup" component={RegisterContainer} />
               <Redirect exact from="/" to="/articles" />
               <Route component={PageNotFound} />
             </Switch>
