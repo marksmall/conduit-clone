@@ -23,7 +23,7 @@ class App extends Component {
         <Banner appName={this.props.appName} />
 
         <div className={styles.main}>
-          <div className="col-md-9">
+          <div className={styles.mycontainer}>
             <div className={styles['feed-toggle']}>
               <ul className="nav flex-row">
                 <li className="nav-item">

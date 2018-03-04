@@ -1,5 +1,3 @@
 .map {
-  flex: 1 0;
-  width: 1000px;
-  height: 500px;
+  height: 100vh; /* important: setting this to 100% hides the footer. */
 }

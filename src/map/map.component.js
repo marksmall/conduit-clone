@@ -86,21 +86,19 @@ class ReactMap extends PureComponent {
     ));
 
     return (
-      <div className="">
-        <Map
-          center={mapConfig.center}
-          zoom={mapConfig.zoom}
-          className={styles.map}
-        >
-          <TileLayer
-            url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
-            attribution="&copy; <a href=&quot;http://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a>, &copy; <a href=&quot;https://carto.com/attribution&quot;>CARTO</a>"
-          />
-          {LeafletMarkers}
-          {/* You can now try to find Alabama on a Map to see how it looks like now with GeoJSON*/}
-          <GeoJSON data={data} style={this.getStyle} />
-        </Map>
-      </div>
+      <Map
+        center={mapConfig.center}
+        zoom={mapConfig.zoom}
+        className={styles.map}
+      >
+        <TileLayer
+          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
+          attribution="&copy; <a href=&quot;http://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a>, &copy; <a href=&quot;https://carto.com/attribution&quot;>CARTO</a>"
+        />
+        {LeafletMarkers}
+        {/* You can now try to find Alabama on a Map to see how it looks like now with GeoJSON*/}
+        <GeoJSON data={data} style={this.getStyle} />
+      </Map>
     );
   }
 }
