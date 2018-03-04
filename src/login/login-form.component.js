@@ -8,8 +8,8 @@ import withForm, {
   isNotEmpty
 } from '../utils/form/validation/withForm';
 
-const LoginForm = ({ form, onChange, onSubmit, errors = {} }) => (
-  <fieldset>
+const LoginForm = ({ form, onChange, submit, errors = {} }) => (
+  <fieldset className="form">
     <fieldset className="form-group">
       <input
         type="email"
@@ -37,7 +37,7 @@ const LoginForm = ({ form, onChange, onSubmit, errors = {} }) => (
     <button
       type="submit"
       className="btn btn-lg btn-primary pull-xs-right"
-      onClick={() => onSubmit(form)}
+      onClick={() => submit(form)}
     >
       Sign in
     </button>

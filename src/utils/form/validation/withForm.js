@@ -35,6 +35,9 @@ export default (initialState, validationRules) => Component =>
           return R.assoc('errors', errors, newState);
         })
       ),
+      submit: form => {
+        rest.props.submit(form);
+      },
       form: R.prop('form', state),
       errors: R.prop('errors', state),
       ...rest
