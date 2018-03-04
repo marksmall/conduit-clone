@@ -1,3 +1,7 @@
+// I don't want to attempt to take credit for this solution,
+// i re-implemented it from:
+// https://medium.com/javascript-inside/form-validation-as-a-higher-order-component-pt-1-83ac8fd6c1f0
+//
 import React from 'react';
 import { compose, mapProps, withState } from 'recompose';
 import * as R from 'ramda';
