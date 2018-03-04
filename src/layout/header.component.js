@@ -22,6 +22,9 @@ const Header = ({ appName }) => {
           <NavLink to="/signup" activeClassName="active">
             <Button content="Sign up" />
           </NavLink>
+          <NavLink to="/map" activeClassName="active">
+            <Button content="Map" />
+          </NavLink>
         </div>
       </nav>
     </header>

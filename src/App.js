@@ -11,6 +11,7 @@ import PageNotFound from './layout/page-not-found.component';
 import ArticlesListContainer from './articles/articles.container';
 import LoginContainer from './login/login.container';
 import RegisterContainer from './register/register.container';
+import ReactMap from './map/map.component';
 
 import styles from './App.module.css';
 
@@ -35,6 +36,7 @@ class App extends Component {
               <Route exact path="/articles" component={ArticlesListContainer} />
               <Route exact path="/login" component={LoginContainer} />
               <Route exact path="/signup" component={RegisterContainer} />
+              <Route exact path="/map" component={ReactMap} />
               <Redirect exact from="/" to="/articles" />
               <Route component={PageNotFound} />
             </Switch>
