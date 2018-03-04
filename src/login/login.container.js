@@ -5,7 +5,7 @@ import { doLogin } from './login.actions';
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: form => {
+    submit: form => {
       dispatch(doLogin(form));
     }
   };
