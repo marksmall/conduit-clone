@@ -13,13 +13,13 @@ const LoginForm = ({ form, onChange, submit, errors = {} }) => (
     <fieldset className="form-group">
       <input
         type="email"
-        name="email"
+        name="username"
         className="form-control form-control-lg"
-        value={form.email}
-        onChange={R.compose(onChange('email'), getValue)}
+        value={form.username}
+        onChange={R.compose(onChange('username'), getValue)}
         placeholder="Email"
       />
-      {errors.email}
+      {errors.username}
     </fieldset>
 
     <fieldset className="form-group">
@@ -73,7 +73,7 @@ const LoginForm = ({ form, onChange, submit, errors = {} }) => (
 );
 
 const validationRules = {
-  email: [[isNotEmpty, 'Name should not be  empty.']],
+  username: [[isNotEmpty, 'Name should not be  empty.']],
   // password: [[isNotEmpty, 'Name should not be  empty.']]
   password: [
     [isLengthGreaterThan(7), 'Minimum Random length of 8 is required.'],
@@ -83,7 +83,7 @@ const validationRules = {
 
 const initialState = {
   form: {
-    email: '',
+    username: '',
     password: ''
   }
 };
